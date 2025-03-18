@@ -4,6 +4,11 @@
 @use "../components/buttons" as comb;
 
 header {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background-color: var.$color-ffffff;
+  width: 100%;
   padding: 20px 0;
   nav {
     @include flx.flex(space-between, center, 10);
@@ -142,7 +147,7 @@ header {
       @include flx.flex(space-between, 0, 0);
       border-top: 1px solid rgb(157, 159, 168);
       padding: 10px 20px;
-      background-color: var.$cool-gray;
+      background-color: var.$color-ffffff;
 
       @media (min-width: 960px) {
         display: none;

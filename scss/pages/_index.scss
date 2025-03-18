@@ -3,6 +3,9 @@
 @use "../layout/flex" as flx;
 @use "../components/buttons" as comb;
 
+.section-big-carousel {
+  margin-top: 100px;
+}
 .section-avto-jihozlar {
   h2 {
     margin-top: 90px;

@@ -1,0 +1,78 @@
+@use "../utils/mixins" as mix;
+@use "../utils/varibles" as var;
+@use "../layout/flex" as flx;
+@use "../components/buttons" as comb;
+
+.section-avto-jihozlar {
+  h2 {
+    margin-top: 90px;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .section-avto-jihoz-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center; /* Ustunlar markazga keladi */
+    align-content: center; /* Vertikal markazlash */
+    gap: 20px; /* Elementlar orasidagi masofa */
+    @media (max-width: 760px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 530px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .section-avto-jihoz-card {
+      margin-top: 40px;
+      border-radius: 20px;
+      width: 100%;
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+      h3 {
+        padding: 5px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      h4 {
+        padding: 5px;
+        font-size: 25px;
+        font-weight: 700;
+      }
+      h5 {
+        margin-top: 5px;
+        display: inline-block;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: var.$color-ffbf1f;
+      }
+      .section-avto-jihoz-card-btn {
+        margin-top: 20px;
+        padding: 0 5px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .korzinka {
+          img {
+            border-radius: 10px;
+            padding: auto;
+            padding: 10px;
+            background-color: var.$color-ffbf1f;
+            height: 40px;
+            width: 40px;
+          }
+        }
+        button {
+          border-radius: 10px;
+          border: none;
+          padding: 10px 30px;
+          color: var.$color-290000;
+          font-size: 15px;
+          font-weight: 700;
+          background-color: var.$color-ffbf1f;
+        }
+      }
+    }
+  }
+}

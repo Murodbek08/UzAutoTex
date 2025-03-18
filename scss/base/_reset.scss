@@ -1,0 +1,27 @@
+@use "../utils/function" as func;
+@use "../base/typograph";
+* {
+  padding: 0;
+  margin: 0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.container {
+  $mb-padding: 20;
+  max-width: func.container(1450, 100, $mb-padding);
+  margin: 0 auto;
+  padding: 0 $mb-padding + px;
+}
+html,
+body {
+  font-family: "Inter", sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}

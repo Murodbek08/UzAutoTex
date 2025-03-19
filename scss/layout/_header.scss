@@ -10,9 +10,9 @@ header {
   background-color: var.$color-ffffff;
   width: 100%;
   padding: 20px 0;
+  box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
   nav {
     @include flx.flex(space-between, center, 10);
-
     .nav_menu {
       width: 100%;
       @media (max-width: 960px) {
@@ -32,7 +32,6 @@ header {
           border: none;
           background-color: var.$color-ffbf1f;
           color: var.$color-290000;
-
           .nav_katalog_text {
             @include flx.flex(0, center, 15);
             .nav_katalog_icon {
@@ -56,14 +55,11 @@ header {
         }
       }
       .nav_menu_search {
+        position: relative;
         @include flx.flex(0, center, 0);
         @include comb.btn(0, 5px, 1px solid var.$color-ffbf1f);
         width: 100%;
         transition: 0.5s;
-        img {
-          @include comb.btn(7px 25px, 0 5px 5px 0, 1px solid var.$color-ffbf1f);
-          background-color: var.$color-ffbf1f;
-        }
         input {
           @include comb.btn(
             0 0 0 20px,
@@ -77,67 +73,173 @@ header {
           transition: 0.5s;
           color: var.$color-ffbf1f;
         }
-      }
+        .search-container {
+          position: relative;
+          width: 100%;
+        }
+        .suggestion-box {
+          position: absolute;
+          top: 45px;
+          left: 0;
+          width: 100%;
+          background: white;
+          border-radius: 8px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          display: none;
+          z-index: 100;
+          padding: 10px;
+          max-height: 300px;
+          overflow-y: auto;
+        }
 
+        .suggestion-item {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          cursor: pointer;
+          border-bottom: 1px solid #ddd;
+        }
+
+        .suggestion-item:last-child {
+          border-bottom: none;
+        }
+
+        .suggestion-item:hover {
+          background: #f0f0f0;
+        }
+
+        .suggestion-item img {
+          width: 50px;
+          height: 50px;
+          border-radius: 5px;
+          object-fit: cover;
+          margin-right: 10px;
+        }
+        .suggestion-info {
+          flex: 1;
+        }
+
+        .suggestion-title {
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .suggestion-price {
+          font-size: 14px;
+          color: var.$color-290000;
+        }
+      }
       .nav_entry,
       .nav_selected,
       .nav_cart {
         @include comb.btn(10px, 6px, 0);
         @include flx.flex(0, center, 10);
         transition: 0.5s;
-
         @media (max-width: 1350px) {
           span {
             display: none;
           }
         }
-
         &:hover {
           background-color: var.$cool-gray;
         }
       }
-
       .nav_selected {
         border-radius: 6px;
         padding: 10px;
       }
-
       .nav_cart {
         border-radius: 6px;
         padding: 10px;
       }
     }
-
     .nav_menu_2 {
       width: 100%;
-
       @media (min-width: 960px) {
         display: none;
       }
-
-      .nav_menu_2_input {
-        @include flx.flex(0, center, 0);
-        background-color: var.$cool-gray;
-        padding: 2px;
-        border: 1px solid var.$cool-gray;
-        border-radius: 10px;
+      .search-container {
+        position: relative;
         width: 100%;
+      }
+      .nav_menu_search-media {
+        display: flex;
+        gap: 10px;
+        @include comb.btn(0 0 0 20px, 5px, 1px solid var.$color-ffbf1f);
+      }
+      input {
+        font-size: 17px;
+        width: 100%;
+        height: 35px;
+        outline: none;
+        border: none;
+        transition: 0.5s;
+        color: var.$color-ffbf1f;
+      }
+      .suggestion-box {
+        position: absolute;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        display: none;
+        z-index: 100;
+        padding: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+      }
 
-        img {
-          padding: 0 10px;
+      .suggestion-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #ddd;
+        transition: background 0.3s;
+      }
+
+      .suggestion-item:last-child {
+        border-bottom: none;
+      }
+
+      .suggestion-item:hover {
+        background: #f0f0f0;
+      }
+
+      .suggestion-item img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+
+      .suggestion-info {
+        flex: 1;
+      }
+
+      .suggestion-title {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .suggestion-price {
+        font-size: 14px;
+        color: #ffbf1f;
+      }
+
+      /* Mobil uchun */
+      @media (max-width: 768px) {
+        .desktop-search {
+          display: none;
         }
-
-        input {
-          font-size: 16px;
-          background-color: var.$cool-gray;
-          width: 100%;
-          height: 30px;
-          outline: none;
-          border: none;
+        .mobile-search {
+          display: block;
         }
       }
     }
-
     .media_nav_menu {
       position: fixed;
       z-index: 999;
@@ -148,11 +250,9 @@ header {
       border-top: 1px solid rgb(157, 159, 168);
       padding: 10px 20px;
       background-color: var.$color-ffffff;
-
       @media (min-width: 960px) {
         display: none;
       }
-
       .home_page,
       .katalog_page,
       .cart_page,

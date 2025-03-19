@@ -35,12 +35,16 @@
               </button>
             </div>
             <div class="nav_menu_search">
-              <input
-                type="search"
-                placeholder="Mahsulotlar va turkumlar izlash"
-              />
-              <img src="./images/header/search.svg" alt="Search img" />
+              <div class="search-container desktop-search">
+                <input
+                  type="text"
+                  id="search-desktop"
+                  placeholder="Mahsulot qidiring..."
+                />
+                <div id="suggestions-desktop" class="suggestion-box"></div>
+              </div>
             </div>
+
             <div class="nav_entry">
               <img src="./images/header/pupil.icon.svg" alt="Pupil icon" />
               <span>Kirish</span>
@@ -55,14 +59,18 @@
             </div>
           </div>
           <div class="nav_menu_2">
-            <div class="nav_menu_2_input">
-              <img src="./images/header/search.svg" alt="" />
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Mahsulotlar va turkumlar izlash"
-              />
-              <div id="results"></div>
+            <div class="nav_menu_search">
+              <div class="search-container mobile-search">
+                <div class="nav_menu_search-media">
+                  <img src="./images/header/search.svg" alt="" />
+                  <input
+                    type="text"
+                    id="search-mobile"
+                    placeholder="Mahsulot qidiring..."
+                  />
+                </div>
+                <div id="suggestions-mobile" class="suggestion-box"></div>
+              </div>
             </div>
           </div>
           <div class="media_nav_menu">
@@ -159,19 +167,13 @@
         <div class="carousel">
           <div class="carousel-track">
             <div class="carousel-item item1">
-              <img
-                src="https://www.autozip.uz/_upload/slides/3.jpg?9043"
-                alt=""
-              />
+              <img src="./images/home/carousel/carousel-image-1.jpg" alt="" />
             </div>
             <div class="carousel-item item2">
-              <img
-                src="https://olcha.uz/image/original/category_slider/cdn_1/2024-08-22/Nv92TM11pmWkb0H8qvDBP7OqtLRrpGMP6VgiIF1j6lo8koTmMeVIMV5zGX3n.jpg"
-                alt=""
-              />
+              <img src="./images/home/carousel/carousel-image-2.jpg" alt="" />
             </div>
             <div class="carousel-item item3">
-              <img src="https://alfacars.com.ua/image/catalog/red.svg" alt="" />
+              <img src="./images/home/carousel/carousel-image-3.jpg" alt="" />
             </div>
           </div>
           <button class="carousel-btn prev">❮</button>
@@ -183,8 +185,12 @@
       <div class="container">
         <h2>Avto jihozlar</h2>
         <div class="section-avto-jihoz-cards">
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
+          <div
+            class="section-avto-jihoz-card"
+            data-name="Radar-detektor"
+            data-price="1 200 000"
+          >
+            <img src="./images/home/mahsulot-rasmlari/radar.jpg" alt="" />
             <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
             <h4>2 064 000</h4>
             <h5>242 000 so'm x 12oy</h5>
@@ -197,11 +203,18 @@
               </div>
             </div>
           </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
+          <div
+            class="section-avto-jihoz-card"
+            data-name="Moy filter"
+            data-price="20 000"
+          >
+            <img
+              src="./images/home/mahsulot-rasmlari/oil-filter.jpg"
+              alt="Oil filter!"
+            />
+            <h3>Moy filter Bosch company</h3>
+            <h4>20 000</h4>
+            <h5>2 000 so'm x 12oy</h5>
             <div class="section-avto-jihoz-card-btn">
               <div class="korzinka">
                 <img src="./images/home/korzinka.svg" alt="" />
@@ -211,459 +224,18 @@
               </div>
             </div>
           </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
-            <div class="section-avto-jihoz-card-btn">
-              <div class="korzinka">
-                <img src="./images/home/korzinka.svg" alt="" />
-              </div>
-              <div>
-                <button>Muddatli to'lov</button>
-              </div>
-            </div>
-          </div>
-          <div class="section-avto-jihoz-card">
-            <img src="./images/home/radar.jpg" alt="" />
-            <h3>Radar-detektor Neoline X-COP 7700s Black</h3>
-            <h4>2 064 000</h4>
-            <h5>242 000 so'm x 12oy</h5>
+          <div
+            class="section-avto-jihoz-card"
+            data-name="Stator Onix Kaptiva Malibu Lasetti Cobalt"
+            data-price="400 000"
+          >
+            <img
+              src="./images/home/mahsulot-rasmlari/stator.webp"
+              alt="stator"
+            />
+            <h3>Stator Onix Kaptiva Malibu Lasetti Cobalt</h3>
+            <h4>400 000</h4>
+            <h5>70 000 so'm x 12oy</h5>
             <div class="section-avto-jihoz-card-btn">
               <div class="korzinka">
                 <img src="./images/home/korzinka.svg" alt="" />

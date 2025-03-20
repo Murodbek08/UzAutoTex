@@ -364,91 +364,83 @@ a {
 .section-avto-jihozlar .section-avto-jihoz-cards {
   border-radius: 5px;
   padding: 10px;
-  width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-content: center; /* Ustunlar markazga keladi */
   align-content: center; /* Vertikal markazlash */
   gap: 20px; /* Elementlar orasidagi masofa */
+  margin: 0 auto;
 }
-@media (max-width: 760px) {
+@media (max-width: 1280px) {
   .section-avto-jihozlar .section-avto-jihoz-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
   }
 }
-@media (max-width: 530px) {
+@media (max-width: 1040px) {
+  .section-avto-jihozlar .section-avto-jihoz-cards {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+  }
+}
+@media (max-width: 804px) {
+  .section-avto-jihozlar .section-avto-jihoz-cards {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+  }
+}
+@media (max-width: 540px) {
   .section-avto-jihozlar .section-avto-jihoz-cards {
     grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
   }
 }
 .section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card {
-  padding-bottom: 20px;
-  border: 2px solid transparent;
-  margin-top: 40px;
-  border-radius: 20px;
   width: 100%;
-  box-shadow: -1px 5px 16px 1px rgba(34, 60, 80, 0.2);
-}
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card img {
-  width: 100%;
-  height: 70%;
-  border-radius: 20px;
-}
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card h3 {
-  padding: 5px;
-  font-size: 18px;
-  font-weight: 500;
-}
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card h4 {
-  padding: 5px;
-  font-size: 25px;
-  font-weight: 700;
-}
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card h5 {
-  margin-top: 5px;
-  display: inline-block;
-  border-radius: 20px;
   padding: 10px;
-  background-color: #ffbf1f;
-  transition: 0.3s;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-color: transparent;
 }
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card h5:hover {
-  background-color: rgb(215, 215, 217);
+.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-image {
+  width: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  scroll-behavior: auto;
 }
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-btn {
-  margin-top: 20px;
-  padding: 0 5px 20px;
+.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-bottom h3 {
+  font-size: 15px;
+  height: 50px;
+  max-width: 200px;
+}
+.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-bottom h4 {
+  max-width: 200px;
+  padding: 10px 0;
+}
+.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-bottom .section-avto-jihoz-card-btn {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 40px;
 }
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-btn .korzinka {
-  cursor: pointer;
-  padding: auto;
+.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-bottom .section-avto-jihoz-card-btn .korzinka {
   border-radius: 10px;
-  padding: 10px;
+  padding: 3px 5px;
   background-color: #ffbf1f;
-  transition: 0.3s;
 }
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-btn .korzinka img {
-  height: 20px;
-  width: 20px;
+.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-bottom .section-avto-jihoz-card-btn .korzinka img {
+  padding-top: 3px;
+  width: 30px;
 }
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-btn .korzinka:hover {
-  background-color: rgb(215, 215, 217);
-}
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-btn button {
-  border-radius: 10px;
-  border: none;
-  padding: 10px 30px;
-  color: #290000;
+.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-bottom .section-avto-jihoz-card-btn button {
+  cursor: pointer;
   font-size: 15px;
   font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
   background-color: #ffbf1f;
-  transition: 0.3s;
-}
-.section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-btn button:hover {
-  background-color: rgb(215, 215, 217);
 }
 
 .carousel {

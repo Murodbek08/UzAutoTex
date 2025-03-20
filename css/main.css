@@ -404,6 +404,7 @@ a {
 }
 .section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-image {
   width: 100%;
+  height: 60%;
   border-radius: 10px;
   background-size: cover;
   scroll-behavior: auto;
@@ -411,10 +412,10 @@ a {
 .section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-bottom h3 {
   font-size: 15px;
   height: 50px;
-  max-width: 200px;
+  width: 100%;
 }
 .section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-bottom h4 {
-  max-width: 200px;
+  width: 100%;
   padding: 10px 0;
 }
 .section-avto-jihozlar .section-avto-jihoz-cards .section-avto-jihoz-card .section-avto-jihoz-card-bottom .section-avto-jihoz-card-btn {
